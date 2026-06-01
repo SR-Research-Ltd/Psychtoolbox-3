@@ -37,10 +37,10 @@ extern int        giSystemInitialized;
 
 // Defined in EyelinkCreateDataStructs.c
 mxArray *CreateMXFSample(const FSAMPLE *fs);
+mxArray *CreateMXFSample2(const FSAMPLE2 *fs2);
 mxArray *CreateMXFSampleRaw(const FSAMPLE_RAW *fs);
-mxArray *CreateMXISample(const ISAMPLE *is);
 mxArray *CreateMXFEvent(const FEVENT *fe);
-mxArray *CreateMXIEvent(const IEVENT *ie);
+mxArray *CreateMXFEvent2(const FEVENT2 *fe2);
 
 // Defined in PsychEyelink.c
 int Verbosity(void);
@@ -119,6 +119,9 @@ PsychError EyelinkReadFromTracker(void);
 //BR
 PsychError EyelinkEDKVersion(void);
 PsychError EyelinkSendFile(void);
+PsychError EyelinkClockBase(void);
+PsychError EyelinkSetOptions(void);
+PsychError EyelinkCurrentTimeuSec(void);
 
 // PSYCH_IS_INCLUDED_Eyelink
 #endif
